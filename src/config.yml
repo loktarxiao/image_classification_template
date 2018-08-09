@@ -1,0 +1,18 @@
+preprocessing:
+    mean: [0, 0, 0]
+    
+    onehot: True
+    num_classes: 2
+
+
+data_loader:
+    train_loader:
+        mode: 'tfrecord'
+        input_handle: ['/mnt/hgfs/share/image_classification_template/output/tfrecord/dogs_vs_cats/train.tfrecord']
+        batch_size: 12
+        shuffle: True
+        num_processors: 4
+        augmentation: True
+        name: 'train_dataloader'
+
+        
